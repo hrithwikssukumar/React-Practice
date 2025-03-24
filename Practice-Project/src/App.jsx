@@ -1,31 +1,30 @@
 
 
-import User from './components/User'
-import React from 'react'
+import React,{useState} from 'react'
 
-function App() {
-  const userData = {
-    name : "Hrithwik",
-    age : 28,
-    address : "Bengaluru",
-    email : "hrithwik@gmail.com",
-    phone: 8281278872
-  };
+const App = () => {
+
+  const [num,setNum] = useState(18);
+
+
+  const handleadd = () => {
+    
+    setNum((currentvalue)=>{
+      return currentvalue + 1 ;
+    });
+  
+  }
 
   return (
     <div>
-      <User
-      // name = {userData.name}
-      // age   = {userData.age}
-      // address = {userData.address}
-      // phone   = {userData.phone}
-      // email   = {userData.email}
-      {...userData}
-      />
+        <h1>{num}</h1>
+        <button onClick={handleadd}>Add</button>
+
     </div>
-  );
+    
+    
+  
+  )
 }
 
-export default App;
-
-
+export default App
