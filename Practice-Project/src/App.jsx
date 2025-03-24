@@ -1,33 +1,31 @@
 
 
+import User from './components/User'
+import React from 'react'
 
+function App() {
+  const userData = {
+    name : "Hrithwik",
+    age : 28,
+    address : "Bengaluru",
+    email : "hrithwik@gmail.com",
+    phone: 8281278872
+  };
 
-function Virat(){
-  return(
-    <>
-       <h1>Hello Virat</h1>
-       <h2>Royal Challengers Bengaluru</h2>
-       <h3>He is the best batsman in the world </h3>
-       <p>Kohli goes down the ground..Kohli goes out of the ground</p>
-    </>
-  )
+  return (
+    <div>
+      <User
+      // name = {userData.name}
+      // age   = {userData.age}
+      // address = {userData.address}
+      // phone   = {userData.phone}
+      // email   = {userData.email}
+      {...userData}
+      />
+    </div>
+  );
 }
 
-function Rohit(){
-  return(
-    <>
-      <h1>Hello Rohit</h1>
-      <h2>Mumbai Indians</h2>
-      <h3>I am playing for India</h3>
-      <p>MI won the Ipl trophy 6 times</p>
-      
-    </>
-    
-  )
-}
-
-export  { Virat,Rohit };
-
-
+export default App;
 
 
