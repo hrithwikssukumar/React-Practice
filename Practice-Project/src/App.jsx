@@ -1,29 +1,22 @@
-
-
-import React,{useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
+    const [num1,setNum1] = useState(10)
 
-  const [num,setNum] = useState(18);
+    useEffect(()=>{
+        setNum1(200)},
+        console.log("from useEffect"),
+        [])
 
-
-  const handleadd = () => {
+    console.log("num1",num1)
     
-    setNum((currentvalue)=>{
-      return currentvalue + 1 ;
-    });
-  
-  }
 
   return (
     <div>
-        <h1>{num}</h1>
-        <button onClick={handleadd}>Add</button>
-
+        <h1>{num1}</h1>
+        <button onClick={()=> setNum1((value) => value+1)}>Add</button>
+      
     </div>
-    
-    
-  
   )
 }
 

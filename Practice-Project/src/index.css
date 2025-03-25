@@ -66,3 +66,37 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
+/* 
+usestate */
+
+
+/* import React,{useState} from 'react'
+
+const App = () => {
+
+  const [num,setNum] = useState(18);
+
+
+  const handleadd = () => {
+
+    setNum((currentvalue)=> currentvalue + 1)
+    
+  
+  }
+
+  return (
+    <div>
+        <h1>{num}</h1>
+        <button onClick={handleadd}>Add</button>
+
+    </div>
+    
+  )
+}
+
+export default App */
