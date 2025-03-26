@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React from "react";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Users from "./pages/Users"
 
-const App = () => {
-    const [num1,setNum1] = useState(10)
-
-    useEffect(()=>{
-        setNum1(200)},
-        console.log("from useEffect"),
-        [])
-
-    console.log("num1",num1)
-    
-
+function App () {
   return (
     <div>
-        <h1>{num1}</h1>
-        <button onClick={()=> setNum1((value) => value+1)}>Add</button>
-      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element = {<Home/>}/>
+        <Route path="/users" element = {<Users/>}/>
+        <Route path="/contact" element = {<Contact/>}/>
+        <Route path="/about" element = {<About/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
 
 export default App
+
